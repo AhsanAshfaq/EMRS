@@ -1,9 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
-from bs4 import BeautifulSoup as SOUP
-import re
 import requests as HTTP
-import unidecode
-import unicodedata
 
 app = Flask(__name__)
 
