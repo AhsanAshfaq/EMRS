@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Movies</title>
+    <link rel="icon" type="image/png" href="../static/fav.png"/>
+      <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body id="content" style="font-family: 'Noto Sans JP', sans-serif;padding-top: 80px;">
+
+{%for i in content%}
+    {%if loop.index == 1 or loop.index == 5 or loop.index == 9 or loop.index == 13 or loop.index == 17 or loop.index == 21 or loop.index == 25 or loop.index == 29 or loop.index == 33 or loop.index == 37 %}
+        <div class="col-sm-12" style="padding-left: 130px;">
+    {%endif%}
+    <div class="col-sm-3 card" style="float: left;width: 20%;margin-right: 15px;padding: 3px;background: white;" title="a good day to die hard" onclick="recommendcard(this)">
+          <div>
+            <div class="imghvr">
+                <img class="card-img-top"   height="360" width="240"  src="{{ i.logo }}">
+            </div>
+            <div class="card-body" style="background: white;">
+              <h5 class="card-title">{{ i.title }}</h5>
+                <p><b>Release Date :</b> {{i.release_date}}</p>
+                <p><b>Rating :</b> {{i.rating}}</p>
+                <p><b>Parental Control:</b> {{i.adult}}</p>
+                <p><b>Overview :</b> {{i.overview}}</p>
+
+            </div>
+          </div>
+        </div>
+    {%if loop.index == 4 or loop.index == 8 or loop.index == 12 or loop.index == 16 or loop.index == 20 or loop.index == 24 or loop.index == 28 or loop.index == 32 or loop.index == 36 or loop.index == 40%}
+        </div>
+<div style="clear:both;margin-bottom: 60px;"></div>
+    {%endif%}
+{%endfor%}
+</body>
+</html>

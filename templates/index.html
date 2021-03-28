@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-MRS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="../static/fav.png"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Auto Complete -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body id="content" style="font-family: 'Noto Sans JP', sans-serif;">
+
+	<div class="ml-container" style="display: block;">
+
+    <center><h1 style=""> What's your mode for movie today ?</h1></center>
+    <div class="form-group shadow-textarea" style="margin-top: 30px;text-align: center;color: white;">
+      <a href="/movies/10751"><img src="../static/happy.png" width="150px;" /></a>
+      <a href="/movies/9648"><img src="../static/angry.png" width="150px;" /></a>
+      <a href="/movies/10749"><img src="../static/romance.png" width="150px;" /></a>
+      <a href="/movies/53"><img src="../static/surprise.png" width="150px;" /></a>
+      <a href="/movies/35"><img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Smliing_Emoji_Icon.png?13752525173949329807" width="150px;" /></a>
+    </div>
+	</div>
+
+  <div id="loader" class="text-center">
+  </div>
+
+  <div class="fail">
+    <center><h3>Sorry! The movie you requested is not in our database.
+    Please check the spelling or try with other movies!</h3></center>
+  </div>
+
+	<div class="results">
+    <center>
+      <h2 id="name" class="text-uppercase"></h2>
+    </center>
+	</div>
+
+
+</body>
+</html>
